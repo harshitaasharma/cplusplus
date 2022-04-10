@@ -44,6 +44,7 @@ int main() {
            }
            else{
                cout<<"odd";
+               cout<<endl;
            }
        } 
     }
