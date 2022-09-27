@@ -90,5 +90,8 @@ int main(){
     cout<<endl<<"Delete at 4th pos=";
     deletePos(head,tail,4);
     print(head);cout<<endl;
+  
+    cout<<"HEAD="<<head->data<<endl;
+    cout<<"TAIL="<<tail->data<<endl;
     return 0;
 }
