@@ -26,11 +26,22 @@ void insertAtTail(Node* &tail,int d){
     tail=temp;
 }
 
-void insertAtPos(int pos,int d,Node* &head){
+void insertAtPos(int pos,int d,Node* &head,Node* &tail){
     Node* temp=head;
+  //IF AT HEAD
+    if(pos==1){
+        insertAtHead(head,d);
+        return;
+    }
     for(int i=0;i<pos-2;i++){
         temp=temp->next;
     }
+    //AT TAIL 
+    if(temp->next==NULL){
+        insertAtTail(tail,d);
+        return;
+    }
+  //ELSE normal
     Node* newnodes=new Node(d);
     newnodes->next=temp->next;
     temp->next=newnodes;
@@ -68,7 +79,7 @@ int main(){
        print(head);
          cout<<endl;
        
-       insertAtPos(3,44,head);
+       insertAtPos(3,44,head,tail);
        print(head);
     
     
