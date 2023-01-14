@@ -63,13 +63,13 @@ void print(){
 int main(){
 
 heap h;
-h.insert(60);
 h.insert(50);
-h.insert(40);
-h.insert(30);
-h.insert(20);
 h.insert(55);
+h.insert(53);
+h.insert(52);
+h.insert(54);
 h.print();
+cout<<endl;
 h.deleted();
 h.print();
 
